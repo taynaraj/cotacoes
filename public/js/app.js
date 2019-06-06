@@ -19,7 +19,7 @@ cotacoesForm.addEventListener('submit',(event)=>{
     if(!ativo){
         mainMensage.innerText='O ativo deve ser informado'
     }
-    fetch(`http://localhost:3000/cotacoes?ativo=${ativo}`).then((response)=>{
+    fetch(`/cotacoes?ativo=${ativo}`).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             mainMensage.innerText= `Alguma coisa deu errado` 
